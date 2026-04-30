@@ -1,0 +1,28 @@
+spring:
+  ai:
+    vectorstore:
+      pgvector:
+        dimensions: 768
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: llama3.2
+      embedding:
+        model: nomic-embed-text
+  application:
+    name: rag-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/ragdb
+    username: raguser
+    password: ragpassword
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
