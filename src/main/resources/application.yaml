@@ -13,9 +13,9 @@ spring:
     name: rag-backend
 
   datasource:
-    url: jdbc:postgresql://localhost:5433/ragdb
-    username: raguser
-    password: ragpassword
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/rag_db}
+    username: efecan
+    password: 123
     driver-class-name: org.postgresql.Driver
 
   jpa:
